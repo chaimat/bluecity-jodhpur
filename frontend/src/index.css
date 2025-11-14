@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+}
+
+body {
+    @apply bg-blue-city-background font-body text-blue-city-text;
+  margin: 0;
+    padding: 0;
+}
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .bg-pattern {
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(58, 110, 165, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(198, 106, 43, 0.05) 0%, transparent 50%);
+}
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-city-primary to-blue-city-accent bg-clip-text text-transparent;
+}
+
+  .shadow-soft {
+    box-shadow: 0 4px 6px -1px rgba(58, 110, 165, 0.1), 0 2px 4px -1px rgba(58, 110, 165, 0.06);
+  }
+
+  .shadow-soft-lg {
+    box-shadow: 0 10px 15px -3px rgba(58, 110, 165, 0.15), 0 4px 6px -2px rgba(58, 110, 165, 0.1);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
